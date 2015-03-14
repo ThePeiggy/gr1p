@@ -1,0 +1,58 @@
+html,
+body {
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.header-text {
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: table-cell;
+  text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+}
+
+.header-text p {
+  font-size: 20px;
+}
+
+.header-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 70px;
+}
+
+.header {
+  display: table;
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: url(image_path('wheel_background.jpg')) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.btn.btn-subscribe {
+  background-color: #930101;
+  color: white;
+}
+
+input.btn.btn-subscribe:focus {
+  background-color: #930101;
+  color: white;
+}
+
+input.btn.btn-subscribe:hover {
+  background-color: #cc0000;
+  color: white;
+}
+
+input.btn.btn-subscribe:hover:focus {
+  background-color: #cc0000;
+  color: white;
+}
