@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title><%= Rails.application.class.to_s.split('::').first.titleize %></title>
+    <%= stylesheet_link_tag 'prelaunch' %>
+    <%= csrf_meta_tag %>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <%= yield %>
+  </body>
+</html>
