@@ -1,0 +1,22 @@
+<div class="header">
+  <%= render partial: "shared/flash_messages", flash: flash %>
+  <div class="header-text">
+    <div class="col-md-8 col-md-offset-2">
+      <h1 class="header-title"><b>GR1P is Coming Soon</b></h1>
+      <br>
+      <div class="header-intro">
+        <p>GR1P is a network that allows you to connect with fellow enthusiasts and it allows you to find inspiration, make new friends, discover new events, and show off your build to the world.</p>
+        <p>Sign up to be notified for the beta launch!</p>
+      </div>
+
+      <%= form_for @prelaunch_subscriber, url: prelaunch_subscribers_path do |f| %>
+        <%= f.text_field :email, class: 'header-field' %>
+        <% if @prelaunch_subscriber.errors[:email] %>
+          <div class="form-error"><p><%= @prelaunch_subscriber.errors[:email].first %></p></div>
+        <% end %>
+        <br>
+        <%= f.submit 'Add me to the list', class: 'btn btn-large btn-default btn-subscribe' %>
+      <% end %>
+    </div>
+  </div>
+</div>
