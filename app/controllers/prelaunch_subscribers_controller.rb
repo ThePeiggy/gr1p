@@ -14,4 +14,10 @@ class PrelaunchSubscribersController < ApplicationController
       redirect_to new_prelaunch_subscriber_path
     end
   end
+
+  def destroy
+    @subscriber = PrelaunchSubscriber.find(params[:id])
+    @subscriber.destroy
+    redirect_to admin_subscribers_path
+  end
 end

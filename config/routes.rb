@@ -1,5 +1,7 @@
 Myapp::Application.routes.draw do
-  resources :prelaunch_subscribers, only: [:new, :create]
+  get "admin/dashboard"
+  get "admin/subscribers"
+  resources :prelaunch_subscribers, only: [:new, :create, :destroy, :show]
 
   get "home/index"
   # The priority is based upon order of creation: first created -> highest priority.
