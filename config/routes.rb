@@ -1,7 +1,22 @@
 Myapp::Application.routes.draw do
-  get "admin/dashboard"
-  get "admin/subscribers"
+
   resources :prelaunch_subscribers, only: [:new, :create, :destroy, :show]
+
+  namespace :admin do
+    resources :sessions, only: [:new, :destroy] do
+      get :signout, to: :destroy, as: :signout
+      get :error
+    end
+
+    namespace :dashboard do
+      get "home"
+      get "subscribers"
+    end
+
+    root to: 'dashboard#home'
+
+    get 'auth/google_oauth2/callback', to: 'sessions#create'
+  end
 
   get "home/index"
   # The priority is based upon order of creation: first created -> highest priority.
@@ -9,6 +24,7 @@ Myapp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root to: 'prelaunch_subscribers#new'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
