@@ -1,5 +1,5 @@
-class AdminController < ApplicationController
-  def dashboard
+class Admin::DashboardController < AdminsController
+  def home
 
   end
 
