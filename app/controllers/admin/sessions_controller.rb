@@ -1,6 +1,6 @@
 class Admin::SessionsController < AdminsController
   skip_before_filter :ensure_authorized
-  ADMIN_EMAILS = ['peihongli94@gmail.com', 'JasonJYPark@gmail.com'].freeze
+  ADMIN_EMAILS = ['peihongli94@gmail.com', 'jasonjypark@gmail.com'].freeze
 
   def new
     redirect_to '/admin/auth/google_oauth2'
