@@ -15,6 +15,7 @@
           <div class="form-error"><p><%= @prelaunch_subscriber.errors[:email].first %></p></div>
         <% end %>
         <br>
+        <%= link_to 'Blog', 'http://www.GR1P.kinja.com', class: 'btn btn-large btn-default btn-subscribe' %>
         <%= f.submit 'Add me to the list', class: 'btn btn-large btn-default btn-subscribe' %>
       <% end %>
     </div>
