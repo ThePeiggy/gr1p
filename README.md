@@ -1,2 +1,2 @@
 # gr1p
-GR1P
+A pre-launch landing page for the GR1P application.
